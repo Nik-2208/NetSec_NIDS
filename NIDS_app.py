@@ -10,7 +10,7 @@ from sklearn.preprocessing import LabelEncoder
 from groq import Groq
 
 # Using the NSL-KDD dataset from Kaggle (download KDDTrain+.txt and rename it)
-filename = r"C:\Users\nikhi\OneDrive\Desktop\AICTE Cybersecurity Major Project\data\KDDTrain+.txt"
+filename = r"KDDTrain+.txt"
 
 st.set_page_config(page_title="NetSec Analyzer", layout="wide")
 
@@ -182,4 +182,5 @@ with t3:
                         )
                         st.markdown(chat.choices[0].message.content)
                 except Exception as e:
+
                     st.error(str(e))
